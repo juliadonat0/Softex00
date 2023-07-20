@@ -5,7 +5,7 @@ soma=(15+8)
 console.log(soma)
 soma++;
 console.log (soma)
-soma = (soma *=3)
+soma *=3
 console.log(soma)
 var fazSol= true
 var comida = ["arroz", "feijao", "ovo"]
