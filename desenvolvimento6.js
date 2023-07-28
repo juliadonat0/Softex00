@@ -1,9 +1,9 @@
 const readline = require("readline-sync");
 
 
-var num1 = Number(readline.question ("Digite o primeiro número"));
-var num2 = Number(readline.question ("Digite o segundo número"));
-var operacao = readline.question ("Qual a operação matematica");
+var num1 = Number(readline.question ("Digite o primeiro número: "));
+var num2 = Number(readline.question ("Digite o segundo número: "));
+var operacao = readline.question ("Qual a operação matematica: ");
 
 calculadora (num1,num2,operacao)
 
@@ -16,7 +16,7 @@ function calculadora(num1,num2,operacao){
       case ("subtração"): 
           console.log ("A subtração é: ", num1-num2)
           break
-      case ("multiplicacao"): 
+      case ("multiplicacao"):  
           console.log ("A multiplicacao é: ", num1*num2)
           break
       case ("divisao"): 
