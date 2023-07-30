@@ -6,7 +6,6 @@ var candX = 0
 var candY = 0
 var candZ = 0
 var branco = 0
-var eleitores = 5
 var nulo = 0
 
 while(true){
