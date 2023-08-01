@@ -27,3 +27,33 @@ console.log(frutas)
 const numeros = ["10", "20", "30", "40", "50"]
 
 console.log(numeros.includes(25))
+
+//6. Crie dois arrays com números de 1 a 5 cada e, em seguida, concatene-os em um novo array.
+
+let num1 = ["1", "2", "3", "4", "5"]
+let num2 = ["1", "2", "3", "4", "5"]
+var num3 = num1.concat(num2);
+console.log(num3)
+
+//7. Dado o array de números abaixo, crie um novo array contendo apenas os número pares.
+//exercicio7()
+//function exercicio7() {
+// const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+
+//}
+
+
+//8. Ordene o seguinte array de números em ordem crescente{
+const numx = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+numx.sort();
+console.log(numx)
+
+//9. Dado o array de frutas abaixo, encontre o índice em que a fruta "laranja" está localizada.
+
+const fruta = ["maça", "banana", "laranja", "uva", "manga"];
+console.log(fruta.indexOf("laranja"))
+
+//10. Crie uma função que receba um parâmetro e verifique se é um array ou não. 
+//A função deve retornar true se for um array e false caso contrário.
