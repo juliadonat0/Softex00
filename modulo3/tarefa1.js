@@ -17,7 +17,7 @@ let pessoas = [
     { nome: 'Carlos', idade: 28, cor: 'prata' },
     { nome: 'Catarina', idade: 77, cor: 'dourado' }
 ];
-console.log(pessoas)
+console.log(pessoas) 
 
 //Depois, faça algumas modificações, alterando uma cor e uma idade.
 //Ao terminar, imprima novamente todas as informações das três listas.
