@@ -1,120 +1,126 @@
 var diaSemana = 4
-switch (diaSemana){
-    case 1: 
-        console.log ("domingo")
-       break
-    case 2: 
-        console.log ("segunda-feira")
+switch (diaSemana) {
+    case 1:
+        console.log("domingo")
         break
-    case 3: 
-        console.log ("terça-feira")
+    case 2:
+        console.log("segunda-feira")
         break
-    case 4: 
-        console.log ("quarta-feira")
+    case 3:
+        console.log("terça-feira")
         break
-    case 5: 
-        console.log ("quinta-feira")
+    case 4:
+        console.log("quarta-feira")
         break
-    case 6: 
-        console.log ("sexta-feira")
+    case 5:
+        console.log("quinta-feira")
         break
-    case 7: 
-        console.log ("sábado")
+    case 6:
+        console.log("sexta-feira")
+        break
+    case 7:
+        console.log("sábado")
         break
     default:
-        console.log ("dia inválido")
+        console.log("dia inválido")
 }
 
 
 var diaMes = 7
-switch (diaMes){
-    case 1: 
-        console.log ("Janeiro")
-       break
-    case 2: 
-        console.log ("Fevereiro")
+switch (diaMes) {
+    case 1:
+        console.log("Janeiro")
         break
-    case 3: 
-        console.log ("Março")
+    case 2:
+        console.log("Fevereiro")
         break
-    case 4: 
-        console.log ("Abril")
+    case 3:
+        console.log("Março")
         break
-    case 5: 
-        console.log ("Maio")
+    case 4:
+        console.log("Abril")
         break
-    case 6: 
-        console.log ("Junho")
+    case 5:
+        console.log("Maio")
         break
-    case 7: 
-        console.log ("Julho")
+    case 6:
+        console.log("Junho")
         break
-        case 8: 
-        console.log ("Agosto")
-       break
-    case 9: 
-        console.log ("Setembro")
+    case 7:
+        console.log("Julho")
         break
-    case 10: 
-        console.log ("Outubro")
+    case 8:
+        console.log("Agosto")
         break
-    case 11: 
-        console.log ("Novembro")
+    case 9:
+        console.log("Setembro")
         break
-    case 12: 
-        console.log ("Dezembro")
+    case 10:
+        console.log("Outubro")
+        break
+    case 11:
+        console.log("Novembro")
+        break
+    case 12:
+        console.log("Dezembro")
         break
     default:
-        console.log ("Mês inválido")
+        console.log("Mês inválido")
 }
 
 let estadoCivil = "solteiro"
-switch (estadoCivil){
-    case ("solteiro"): 
-        console.log ("Você é Solteiro!")
-       break
-    case ("casado"): 
-        console.log ("Você é Casado!")
+switch (estadoCivil) {
+    case ("solteiro"):
+        console.log("Você é Solteiro!")
         break
-    case ("Divorciado"): 
-        console.log ("Você é Divorciado!")
+    case ("casado"):
+        console.log("Você é Casado!")
         break
-    default: 
-        console.log ("Outro")
+    case ("Divorciado"):
+        console.log("Você é Divorciado!")
+        break
+    default:
+        console.log("Outro")
 }
 
 let animal = ("cachorro")
-switch (animal){
-    case ("cachorro"): 
-        console.log ("Au-Au!")
-       break
-    case ("gato"): 
-        console.log ("Miau!")
+switch (animal) {
+    case ("cachorro"):
+        console.log("Au-Au!")
         break
-    case (passaro): 
-        console.log ("Piu!")
+    case ("gato"):
+        console.log("Miau!")
         break
-    default: 
-        console.log ("Outro")
+    case (passaro):
+        console.log("Piu!")
+        break
+    default:
+        console.log("Outro")
 }
 
 let num1 = 7
 let num2 = 9
-let operacao = ("subtração")
+let operacao = ("soma")
 
-switch (operacao){
-    case ("soma"): 
-        console.log (num1 + num2)
-       break
-    case ("subtração"): 
-        console.log (num1 - num2)
+switch (operacao) {
+    case ("soma"):
+        var soma = (num1 + num2)
+        console.log(`a soma entre ${num1} e ${num2} é: ${soma}`);
         break
-    case ("divisão"): 
-        console.log (num1 / num2)
+    case ("subtração"):
+        console.log(num1 - num2)
         break
-    case ("multiplicação)"): 
-        console.log (num1 * num2)
+    case ("divisão"):
+        console.log(num1 / num2)
         break
-   default: 
-        console.log ("operação inválida")
+    case ("multiplicação)"):
+        console.log(num1 * num2)
+        break
+    default:
+        console.log("operação inválida")
 }
+
+
+
+
+
