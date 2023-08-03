@@ -6,9 +6,10 @@
 
 
 let animal = Array();
-animal.push(['cão', 'dalmata', 3]);
-animal.push(['gato', 'domestico', 6]);
-animal.push(['pato', 'real', 9]);
+console.log("Animal    Nome    Espécie    Idade")
+animal.push(['cão', 'Totó', 'dalmata', 3]);
+animal.push(['gato', 'Mingau', 'domestico', 6]);
+animal.push(['pato', 'Donald', 'real', 9]);
 console.log(animal);
 
 
