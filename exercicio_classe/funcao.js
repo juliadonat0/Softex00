@@ -10,10 +10,10 @@ function exibirSaudacao(nome, dia, mes) {
 //2. Escreva uma função chamada dobro que aceite um parâmetro num e exiba o dobro desse número.
 
 console.log("EXERCÍCIO 2")
-dobro()
+const readline = require("readline-sync");
+var num = readline.question("Digite um número: ")
+dobro(num)
 function dobro(num) {
-    const readline = require("readline-sync");
-    var num = readline.question("Digite um número: ")
     let resultado = num * 2
     console.log(`O dobro do número ${num} é: ${resultado}`)
 }
@@ -49,12 +49,14 @@ function verificarPar(numero) {
 //desse array no console, um por um.
 
 console.log("EXERCÍCIO 5")
-imprimirLista()
-function imprimirLista() {
-    let frutas = ['maça', 'banana', 'laranja']
-    frutas.forEach(function (frutas) {
-        console.log(frutas);
-    })
+let frutas = ['maça', 'banana', 'laranja']
+imprimirLista(frutas)
+
+function imprimirLista(frutas) {
+
+    for (let posicaoArray = 0; posicaoArray < frutas.length; posicaoArray++) {
+        console.log(frutas[posicaoArray])
+    }
 }
 
 //6. Escreva uma função chamada calcularMedia que receba um array de números como parâmetro e 
@@ -62,27 +64,46 @@ function imprimirLista() {
 //valor da média.
 
 console.log("EXERCÍCIO 6")
-calcularMedia()
+var listaNumeros = [10, 40, 60, 90]
+calcularMedia(listaNumeros)
 function calcularMedia(array) {
-    var listaNumeros = [10, 40, 60, 90]
+
     var contador = 0
     var soma = 0
-    while (contador < listaNumeros.length) {
-        soma = soma + listaNumeros[contador]
+    while (contador < array.length) {
+        soma = soma + array[contador]
         contador++
     }
     console.log("A média é: ", soma / listaNumeros.length)
+}
+
+
+console.log("EXERCÍCIO 6 versão 2")
+var listaNumeros2 = [10, 40, 60, 90]
+calcularMedia2(listaNumeros2)
+function calcularMedia2(listaNumeros2) {
+    let soma = 0
+    for (let contador = 0; contador < listaNumeros2.length; contador++) {
+        soma = soma + listaNumeros2[contador]
+    }
+    console.log("A média é: ", soma / listaNumeros2.length)
 }
 
 //7. Crie uma função chamada maiorNumero que receba um array de números como parâmetro e 
 //exiba o maior número presente no array no console.
 
 console.log("EXERCÍCIO 7")
-maiorNumero()
+var numeros = [1, 2, 5, 200, 87, 5, 50];
+maiorNumero(numeros)
 function maiorNumero(numeros) {
-    var numeros = [1, 2, 5, 200, 879, 5, 50];
-    var maior = Math.max(...numeros);
-    console.log(maior)
+    let maior = 0
+
+    for (let contador = 0; contador < numeros.length; contador++) {
+        if (numeros[contador] > maior) {
+            maior = numeros[contador]
+        }
+    }
+        console.log(maior)
 }
 
 //8. Escreva uma função chamada contarVogais que aceite uma string como parâmetro e 
@@ -98,9 +119,9 @@ console.log("EXERCÍCIO 8")
 console.log("EXERCÍCIO 9")
 imprimirTabuada()
 function imprimirTabuada(numero) {
-    var numero =1
+    var numero = 1
     while (numero <= 10) {
-        console.log(numero *8)
+        console.log(numero * 8)
         numero++
     }
 
