@@ -110,30 +110,37 @@ function maiorNumero(numeros) {
 //conte quantas vogais (a, e, i, o, u) ela contém. Exiba o resultado no console.
 
 console.log("EXERCÍCIO 8")
+contaVogais("pescaaaaa")
+function contaVogais(palavra){
+    var arrayPalavra = palavra.split("")
+    var contadorVogais = 0
+    for(let contador = 0; contador < arrayPalavra.length; contador++){
+        let letra = arrayPalavra[contador]
+        if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+            contadorVogais++
+        }
+    }
 
-
+    console.log("A quantidade de vogais é : ", contadorVogais)
+}
 
 
 //9. Crie uma função chamada imprimirTabuada que aceite um número como entrada e exiba a 
 //tabuada desse número de 1 a 10 no console.
 console.log("EXERCÍCIO 9")
-imprimirTabuada()
+var numero = 5
+imprimirTabuada(numero)
 function imprimirTabuada(numero) {
-    var numero = 1
-    while (numero <= 10) {
-        console.log(numero * 8)
-        numero++
+    for(let contador = 1; contador <= 10; contador++){
+        console.log(numero * contador)
     }
-
 }
-
 
 //10. Escreva uma função chamada verificarPrimo que receba um número como parâmetro e
 //exiba no console se o número é primo ou não.
-
-verificarPrimo()
+var x = 8
+verificarPrimo(x)
 function verificarPrimo(x) {
-    var x = 8
     var cont = 1
     var primo = 0
     while (cont <= x) {
