@@ -30,7 +30,7 @@ function exercicio3() {
     }
 }
 
-// 4. Imprima os número de 10 a 1 em ordem descrecente usadno for.
+// 4. Imprima os número de 10 a 1 em ordem descrecente usando for.
 console.log("EXERCÍCIO 4")
 exercicio4()
 function exercicio4() {
