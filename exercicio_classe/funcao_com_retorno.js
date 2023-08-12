@@ -86,15 +86,35 @@ function calcularIMC2(peso, altura) {
 
 //5. Crie uma função chamada contarVogais que aceite uma string como parâmetro 
 //e retorne o número de vogais (a, e, i, o, u) presentes na string.
-contarvogais()
-function contarvogais(palavra){
+console.log(contarVogais("paralelepipedo"))
+function contarVogais(palavra) {
 
-
+    var arrayPalavra = palavra.split("")
+    var contadorVogais = 0
+    for (let contador = 0; contador < arrayPalavra.length; contador++) {
+        let letra = arrayPalavra[contador]
+        if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
+            contadorVogais++
+        }
+    }
+    return "A quantidade de vogais é : " + contadorVogais
 }
 
 //6. Escreva uma função chamada celsiusParaFahrenheit que receba uma temperatura em graus Celsius 
 //como parâmetro e retorne o valor equivalente em Fahrenheit.
+console.log(celsiusParaFahrenheit(20))
+function celsiusParaFahrenheit(celsius) {
+    return (celsius * 1.8) + 32
+}
 
 
 //7. Crie uma função chamada gerarSenha que aceite um parâmetro tamanho (número inteiro) e 
 //retorne uma senha aleatória com o tamanho especificado.
+console.log (gerarSenha(14))
+function gerarSenha(tamanho) {
+    let senha = ""
+    for (var contador = 0; contador < tamanho; contador++){
+        senha = senha + Math.floor(Math.random()*10)
+    }
+        return senha
+}
