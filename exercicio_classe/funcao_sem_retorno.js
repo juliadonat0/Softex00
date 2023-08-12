@@ -69,3 +69,17 @@ function apresentacao(nome = "Julia", idade = 35, profissao = "contadora") {
 //5. Crie uma função chamada mensagemPersonalizada que receba um parâmetro estilo para o estilo
 //da mensagem (por exemplo, "normal", "negrito", "itálico"), com um valor padrão de estilo sendo
 //"normal". A função deve exibir no console o texto fornecido com o estilo especificado.
+
+console.log("EXERCÍCIO 5")
+mensagemPersonalizada(`Olá, Heitor!`, "sublinhado")  //estilo diferente dos 2 indicados retorna o 3º estilo"normal"
+
+function mensagemPersonalizada(texto, estilo) {
+    if (estilo == "negrito") {
+        console.log(texto + `Está no estilo ${estilo}`)
+    } else if (estilo == "itálico") {
+        console.log(texto + `Está no estilo ${estilo}`)
+    } else {
+        console.log(texto + `Está no estilo Normal`)
+    }
+
+}
