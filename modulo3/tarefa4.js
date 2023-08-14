@@ -16,6 +16,10 @@ function No(valor) {
     }
     return lista;
   }
+
+
+
+  
   
   function imprimirLista(lista) {
     var aux = lista;
