@@ -2,13 +2,30 @@
 //1. Crie uma função recursiva chamada somaRecursiva que receba um número inteiro positivo n como
 //argumento e calcule a soma de todos os números inteiros de 1 até n.
 
-console.log("a soma é: ", somaRecursiva(5))
+console.log("a soma é: ", somaRecursiva(3))
 function somaRecursiva(numero) {
     if (numero == 1) {
         return 1
     }
     return numero + somaRecursiva(numero - 1)
 }
+
+console.log("EXERCÍCIO 1- outra forma")
+function somaRecursividade(numero) {
+    if (numero == 1 || numero == 0) {
+        return 1
+    } else {
+        return numero + somaRecursividade(numero - 1)
+    }
+}
+const numero = 5
+console.log(`A soma do ${numero} é ${somaRecursividade(numero)}`)
+
+
+
+
+
+
 
 /* 
     5 + (somaRecursiva -> 5-1)
@@ -23,18 +40,17 @@ function somaRecursiva(numero) {
 //função de forma recursiva.
 
 
-//fatorial
-function fatorial(numero) {
-    console.log(numero)
-    console.log(numero == 1)
-    if (numero == 1) {
-        console.log(1)
+console.log("EXERCÍCIO 2 - FIBONACCI")
+function fibonacci(posicao) {
+    if (posicao == 1) {
+        return 0
+    } else if (posicao == 2) {
         return 1
+    } else {
+        return fibonacci(posicao - 1) + fibonacci(posicao - 2)
     }
-
-    return numero * fatorial(numero - 1)
 }
-console.log(fatorial(4))
+console.log(fibonacci(5))
 
 
 
