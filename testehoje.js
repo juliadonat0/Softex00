@@ -96,10 +96,129 @@ function exercicio5() {
 exercicio7()
 function exercicio7() {
   let numero = 1
-  
+
   while (numero <= 30) {
-    console.log (numero * 3)
+    console.log(numero * 3)
     numero++
   }
 }
 
+
+console.log("lista encadeada")
+function listaEncadeada() {
+  let head = null //cabeça
+  let lenght = 0 //tamanho da lista
+  const novo = (value) => {
+    return {
+      value,
+      next: null
+    }
+  }
+  const add = (valor) => {
+    if (!head) {
+
+    }
+
+  }
+
+
+
+  return {
+    lenght: () => lenght
+  }
+}
+const list = listaEncadeada()
+console.log(list.lenght())
+
+
+
+
+
+function buscaLinear(array, elementoBuscado) {
+  for (i = 0; i < array.length; i++) {
+    if (array[i] === elementoBuscado) {
+      return i
+    }
+  }
+  // caso o elemento não seja encontrado, retorna -1
+  return -1
+}
+
+const listaNumeros = [15, 8, 10, 25, 12, 30, 5, 20, 18, 7];
+const elementoProcurado = 20;
+
+const indice = buscaLinear(listaNumeros, elementoProcurado);
+
+if (indice !== -1) {
+  console.log(`O elemento ${elementoProcurado} está no índice ${indice}`);
+} else {
+  console.log(`O elemento ${elementoProcurado} não está na lista.`)
+}
+
+//fatorial recursividade
+function fatorial(n) {
+  if (n === 0 || n === 1) {
+    return 1
+  } else {
+    return n * fatorial(n - 1);
+  }
+}
+const numero = 9
+console.log(`O fatorial de ${numero} é ${fatorial(numero)}`)
+
+//fatorial
+function fatorial(numero) {
+  console.log(numero)
+  console.log(numero == 1)
+  if (numero == 1) {
+    console.log(1)
+    return 1
+  }
+
+  return numero * fatorial(numero - 1)
+}
+console.log(fatorial(4))
+
+
+console.log('ERRO DE REFERÊNCIA - try ... catch')
+let x;
+try {
+  x = y + 1;
+} catch (error) {
+  console.log('name', error.name)
+  console.log('message', error.message)
+}
+
+console.log('ERRO DE SINTAXE - try ... catch')
+try {
+  eval("alert ('hello)");
+} catch (error) {
+  console.log('name', error.name)
+  console.log('message', error.message) // erro devido a falta de ' no nome hello
+}
+
+console.log('ERRO DE TIPO - try ... catch')
+let num = 1;
+try {
+  num.toUpperCase() //coloca a string toda maiuscula
+} catch (error) {
+  console.log('name', error.name)
+  console.log('message', error.message) // erro pq a variavel é número e a condição é colocar em maiuscula
+}
+
+
+console.log('ERRO PERSONALIZADO - try ... catch')
+function userException(message) {
+  this.message = message;
+  this.name = "userExeption"
+}
+try {
+  let num = -6;
+  if (numero < 0) {
+    throw new userException('O número deve ser positivo');
+  }
+  console.log('ok');
+} catch (error) {
+  console.log('name', error.name)
+  console.log('message', error.message) 
+}
