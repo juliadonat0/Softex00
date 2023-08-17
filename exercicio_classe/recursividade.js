@@ -2,7 +2,7 @@
 //1. Crie uma função recursiva chamada somaRecursiva que receba um número inteiro positivo n como
 //argumento e calcule a soma de todos os números inteiros de 1 até n.
 
-console.log("a soma é: ", somaRecursiva(3))
+console.log("a soma é: ", somaRecursiva(5))
 function somaRecursiva(numero) {
     if (numero == 1) {
         return 1
@@ -56,9 +56,10 @@ console.log(fibonacci(5))
 
 
 
-//1. Crie um programa que recebe do teclado um número e tenta dividir por zero dentro de um bloco try...catch. Capture o erro e o exiba "Erro: Divisão por zero" no console.
-//2. Crie um programa que recebe do teclado uma string não numérica em um número utilizando parseInt dentro de um bloco try...catch. Capture o erro e o exiba "Erro: Conversão inválida" no console.
-//3. Crie um programa que recebe do teclado um objeto e tente acessar uma propriedade inexistente desse objeto dentro de um bloco try...catch. Capture o erro e o exiba "Erro: Propriedade não encontrada" no console.
+
+
+
+
 
 //1. Dado um array de números [3, 7, 2, 9, 5], crie um loop "for" que itere pelo array e exiba cada elemento no console.
 //2. Suponha que você tenha um objeto com valores numéricos: {a: 10, b: 20, c: 30, d: 40}. Utilize um laço "for...in" para iterar pelas chaves do objeto e calcular a soma de todos os valores.
