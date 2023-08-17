@@ -1,21 +1,26 @@
 //1. Crie um programa que recebe do teclado um número e tenta dividir por zero dentro de um 
 //bloco try...catch. Capture o erro e o exiba "Erro: Divisão por zero" no console.
 
-console.log("EXERCÍCIO 1 - TRY...CATCH") // Em javascript a divisão por zero não retorna um erro. Retorna infiniy 
-console.log(divisao(10, 0))
-function divisao(dividendo, divisor) {
-    try {
-        return dividendo / divisor
-    } catch (erro) {
-        console.log(" Erro: Divisão por zero no console")
+console.log("EXERCÍCIO 1") // Em javascript a divisão por zero não retorna um erro. Retorna infiniy 
+let dividendo = 10
+let divisor = 0
+let result = dividendo / divisor
+try {
+    if (divisor === 0) {
+        throw "Valor negado"
+    } else {
+        console.log(`O resultado é: ${result}`)
     }
+} catch (erro) {
+    console.log(" Erro: Divisão por zero")
 }
 
+
 //2. Crie um programa que recebe do teclado uma string não numérica em um número
-// utilizando parseInt dentro de um bloco try...catch. 
+//utilizando parseInt dentro de um bloco try...catch. 
 //Capture o erro e o exiba "Erro: Conversão inválida" no console.
 
-console.log('exercicio 2')
+console.log('EXERCÍCIO 2')
 var str = "25T";
 try {
     var number = Integer.parseInt(str);
@@ -31,7 +36,7 @@ catch (ex) {
 //exiba "Erro: Propriedade não encontrada" no console.
 
 
-console.log("EXERCÍCIO 3 - TRY...CATCH")
+console.log("EXERCÍCIO 3")
 
 tentaAcessarObjeto("Julia")
 function tentaAcessarObjeto(pessoa) {
@@ -39,6 +44,6 @@ function tentaAcessarObjeto(pessoa) {
         return Pessoa.nome;
     } catch (error) {
         console.log('Propriedade nao encontrada')
-        console.log(error)
+        //console.log(error) se ativar, aparece a referência do erro
     }
 }
