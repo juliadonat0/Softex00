@@ -51,16 +51,3 @@ function fibonacci(posicao) {
     }
 }
 console.log(fibonacci(5))
-
-
-
-
-
-
-
-
-
-
-//1. Dado um array de números [3, 7, 2, 9, 5], crie um loop "for" que itere pelo array e exiba cada elemento no console.
-//2. Suponha que você tenha um objeto com valores numéricos: {a: 10, b: 20, c: 30, d: 40}. Utilize um laço "for...in" para iterar pelas chaves do objeto e calcular a soma de todos os valores.
-//3. Dado um array de números [12, 5, 8, 21, 16, 7], crie um loop "for" que itere pelo array, verificando se cada número é par. Se for par, adicione-o a um novo array. No final, exiba o novo array com os números pares.
