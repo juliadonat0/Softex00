@@ -87,7 +87,16 @@ let aluno = {
 console.log(aluno.notas.splice[1, 1])
 
 
-// Se você tem um objeto "dados" com uma propriedade "valores" contendo [10, 20, 30], como você remove o segundo valor (20) desse array?
+// 9. Se você tem um objeto "dados" com uma propriedade "valores" contendo [10, 20, 30], 
+//como você remove o segundo valor (20) desse array?
+console.log ("EXERCÍCIO 9")
+let valores = {
+valor: [10,20,30]
+}
+console.log (valores.valor.splice[2,1])
 
-// Como você cria um objeto com as propriedades "titulo" (com o valor "Livro") e "autor" (com o valor "Maria")?
-// // 
+
+
+// 10. Como você cria um objeto com as propriedades "titulo" (com o valor "Livro") 
+//e "autor" (com o valor "Maria")?
+console.log ("EXERCÍCIO 10")
