@@ -1,9 +1,10 @@
-var nome; // String
-var idade; // Number
-var salario; // Number
-var diploma; // Boolean
+var nome = "Xuxa"; // String
+var idade = 60 // Number
+var salario = 50000 // Number
+var diploma = false // Boolean
 
-cadastro("Xuxa", 60, 50000, false)
+cadastro(nome, idade, salario, diploma)
+
 function cadastro(nome, idade, salario, diploma) {
     console.log(`Nome: ${nome}`);
     console.log(`Idade: ${idade}`);
