@@ -103,29 +103,77 @@
 // o número de dias trabalhados pelo encanador e imprima a quantia líquida que deverá ser paga,
 // sabendo-se que são descontados 8% para pagamento de impostos e taxas devidas.
 
-console.log("EXERCÍCIO 6")
-const readline = require("readline-sync");
-let valorDia = 30
-let numeroDiasTrabalhado = (readline.question(" Qual o número de dias trabalhados? "))
-let imposto = 8
+// console.log("EXERCÍCIO 6")
+// const readline = require("readline-sync");
+// let valorDia = 30
+// let numeroDiasTrabalhado = (readline.question(" Qual o número de dias trabalhados? "))
+// let imposto = 8
 
-console.log( `Valor Bruto ${valorDia*numeroDiasTrabalhado}`)
-console.log (`Valor do Imposto ${((valorDia*numeroDiasTrabalhado)*imposto)/100}`)
-console.log(`O valor líquido a receber será: RS ${(((numeroDiasTrabalhado * valorDia) - ((valorDia*numeroDiasTrabalhado)*imposto)/100))}`)
+// console.log( `Valor Bruto ${valorDia*numeroDiasTrabalhado}`)
+// console.log (`Valor do Imposto ${((valorDia*numeroDiasTrabalhado)*imposto)/100}`)
+// console.log(`O valor líquido a receber será: RS ${(((numeroDiasTrabalhado * valorDia) - ((valorDia*numeroDiasTrabalhado)*imposto)/100))}`)
 
 
 //7. Faça um programa para ler um horário (hora:minuto:segundo) de início e a duração, 
 //em segundos, de uma experiência biológica. O programa deve informar o horário 
 //(hora:minuto:segundo) de término da mesma.
 
-//8. Uma empresa paga R$ 10,00 por hora normal trabalhada e R$ 15,00 por hora extra. Escreva um programa que leia o total de horas normais e o total de horas extras trabalhadas por um empregado em um ano e calcule o salário anual deste trabalhador.
+//8. Uma empresa paga R$ 10,00 por hora normal trabalhada e R$ 15,00 por hora extra. 
+//Escreva um programa que leia o total de horas normais e o total de horas extras trabalhadas
+// por um empregado em um ano e calcule o salário anual deste trabalhador.
 
 //9. Elabore um programa em JS para que leia três números e mostre-os em ordem crescente.
+// console.log("EXERCÍCIO 9")
+// exercicio9()
+// function exercicio9() {
+//     for (let numero = 3; numero >= 1; numero--) {
+//         console.log(numero)
+//     }
+// }
 
-// 10. Crie um programa de conversão entre as temperaturas Celsius, Farenheit e Kelvin usando funções para isso. O programa deve ler a opção escolhida pelo usuário, que escolhe uma determinada conversão entre escalas termométricas e, em seguida, o programa solicita a temperatura a ser convertida. As opções de conversão são as seguintes: utilize o switch case
+// 10. Crie um programa de conversão entre as temperaturas Celsius, Farenheit e Kelvin usando
+// funções para isso. O programa deve ler a opção escolhida pelo usuário, que escolhe uma 
+//determinada conversão entre escalas termométricas e, em seguida, o programa solicita a 
+//temperatura a ser convertida. As opções de conversão são as seguintes:
+// utilize o switch case
 // 1.	de Celsius para Fahrenheit.
 // 2.	de Celsius para Kelvin.
 // 3.	de Fahrenheit para Celsius.
 // 4.	de Fahrenheit para Kelvin.
 // 5.	de Kelvin para Celsius.
 // 6.	de Kelvin para Fahrenheit
+console.log("EXERCÍCIO 10")
+const readline = require("readline-sync");
+
+let temperatura = parseInt(readline.question("Digite a temperatura: "))
+let escalaConversao = (readline.question("Qual a escala de conversão"))
+
+switch (escalaConversao) {
+    case ("cf"):
+        var celsiusParaFahrenheit = (temperatura * 1.8) + 32
+        console.log(`A temperatura ${temperatura} Celsius equivale a: ${celsiusParaFahrenheit} Fahrenheit`);
+        break
+    case ("ck"):
+        var celsiusParaKevin = temperatura + 273.15
+        console.log(`A temperatura ${temperatura} Celsius equivale a: ${celsiusParaKevin} Kevin`);
+        break
+    case ("fc"):
+        var fahrenheitParaCelsius = (temperatura - 32) * 5 / 9
+        console.log(`A temperatura ${temperatura} Fahrenheit equivale a: ${fahrenheitParaCelsius} Celsius`);
+        break
+    case ("fk"):
+        var fahrenheitParaKevin = (temperatura - 32) * 5 / 9 + 273.15
+        console.log(`A temperatura ${temperatura} Fahrenheit equivale a: ${fahrenheitParaKevin} Kevin`);
+        break
+    case ("kc"):
+        var kevinParaCelsius = temperatura - 273.15
+        console.log(`A temperatura ${temperatura} Kevin equivale a: ${kevinParaCelsius} Celsius`);
+        break
+    case ("kf"):
+        var kevinParaFahrenheit = (temperatura - 273.15) * 9/5 + 32
+        console.log(`A temperatura ${temperatura} Kevin equivale a: ${kevinParaFahrenheit} Fahrenheit`);
+        break
+
+    default:
+        console.log("operação inválida")
+}
