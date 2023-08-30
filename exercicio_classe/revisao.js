@@ -62,19 +62,17 @@
 //SOMA DOS 50 PRIMEIROS NÚMEROS PARES
 console.log("Exercício 4 - FOR")
 let somaPar = 0
-
-for (let numero = 1; numero <= 6; numero++) {
-    if (numero % 2 === 0) {
-        somaPar += numero
-    }
-    console.log(somaPar)
+for (let numero = 0; numero <= 50; numero += 2) {
+    somaPar += numero
 }
+console.log(somaPar)
+
 
 console.log("Exercício 4 - WHILE")
 exercicio4()
 function exercicio4() {
 
-    let contador = 1
+    let contador = 0
     let soma = 0
     while (contador <= 4) {
         (soma += contador)
@@ -84,4 +82,4 @@ function exercicio4() {
 }
 
 
-console.log("Exercício 4 - DO WHILE")
+// console.log("Exercício 4 - DO WHILE")
