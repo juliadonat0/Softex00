@@ -142,38 +142,54 @@
 // 4.	de Fahrenheit para Kelvin.
 // 5.	de Kelvin para Celsius.
 // 6.	de Kelvin para Fahrenheit
-console.log("EXERCÍCIO 10")
-const readline = require("readline-sync");
+// console.log("EXERCÍCIO 10")
+// const readline = require("readline-sync");
 
-let temperatura = parseInt(readline.question("Digite a temperatura: "))
-let escalaConversao = (readline.question("Qual a escala de conversão"))
+// let temperatura = parseInt(readline.question("Digite a temperatura: "))
+// let escalaConversao = (readline.question("Qual a escala de conversão"))
 
-switch (escalaConversao) {
-    case ("cf"):
-        var celsiusParaFahrenheit = (temperatura * 1.8) + 32
-        console.log(`A temperatura ${temperatura} Celsius equivale a: ${celsiusParaFahrenheit} Fahrenheit`);
-        break
-    case ("ck"):
-        var celsiusParaKevin = temperatura + 273.15
-        console.log(`A temperatura ${temperatura} Celsius equivale a: ${celsiusParaKevin} Kevin`);
-        break
-    case ("fc"):
-        var fahrenheitParaCelsius = (temperatura - 32) * 5 / 9
-        console.log(`A temperatura ${temperatura} Fahrenheit equivale a: ${fahrenheitParaCelsius} Celsius`);
-        break
-    case ("fk"):
-        var fahrenheitParaKevin = (temperatura - 32) * 5 / 9 + 273.15
-        console.log(`A temperatura ${temperatura} Fahrenheit equivale a: ${fahrenheitParaKevin} Kevin`);
-        break
-    case ("kc"):
-        var kevinParaCelsius = temperatura - 273.15
-        console.log(`A temperatura ${temperatura} Kevin equivale a: ${kevinParaCelsius} Celsius`);
-        break
-    case ("kf"):
-        var kevinParaFahrenheit = (temperatura - 273.15) * 9/5 + 32
-        console.log(`A temperatura ${temperatura} Kevin equivale a: ${kevinParaFahrenheit} Fahrenheit`);
-        break
+// switch (escalaConversao) {
+//     case ("cf"):
+//         var celsiusParaFahrenheit = (temperatura * 1.8) + 32
+//         console.log(`A temperatura ${temperatura} Celsius equivale a: ${celsiusParaFahrenheit} Fahrenheit`);
+//         break
+//     case ("ck"):
+//         var celsiusParaKevin = temperatura + 273.15
+//         console.log(`A temperatura ${temperatura} Celsius equivale a: ${celsiusParaKevin} Kevin`);
+//         break
+//     case ("fc"):
+//         var fahrenheitParaCelsius = (temperatura - 32) * 5 / 9
+//         console.log(`A temperatura ${temperatura} Fahrenheit equivale a: ${fahrenheitParaCelsius} Celsius`);
+//         break
+//     case ("fk"):
+//         var fahrenheitParaKevin = (temperatura - 32) * 5 / 9 + 273.15
+//         console.log(`A temperatura ${temperatura} Fahrenheit equivale a: ${fahrenheitParaKevin} Kevin`);
+//         break
+//     case ("kc"):
+//         var kevinParaCelsius = temperatura - 273.15
+//         console.log(`A temperatura ${temperatura} Kevin equivale a: ${kevinParaCelsius} Celsius`);
+//         break
+//     case ("kf"):
+//         var kevinParaFahrenheit = (temperatura - 273.15) * 9/5 + 32
+//         console.log(`A temperatura ${temperatura} Kevin equivale a: ${kevinParaFahrenheit} Fahrenheit`);
+//         break
 
-    default:
-        console.log("operação inválida")
+//     default:
+//         console.log("operação inválida")
+// }
+
+//11. Fazer uma função que recebe um mês e um ano como parâmetros e retorna o número de dias daquele mês daquele ano. Dica: um ano é bissexto quando é múltiplo de 4 e não múltiplo de 100, ou também quando é múltiplo de 400.
+// 12. Faça uma função que recebe, por parâmetro, a hora de início e a hora de término de um jogo, ambas subdivididas em 2 valores distintos: horas e minutos. A função deve retornar, a duração do jogo em minutos, considerando que o tempo máximo de duração de um jogo é de 24 horas e que o jogo pode começar em um dia e terminar no outro.
+//13. Escreva a função para cálculo do N-ésimo termo da série de Fibonacci utilizando recursividade.
+console.log("EXERCÍCIO 13")
+
+function fibonacci(posicao) {
+    if (posicao == 1) {
+        return 0
+    } else if (posicao == 2) {
+        return 1
+    } else {
+        return fibonacci(posicao - 1) + fibonacci(posicao - 2)
+    }
 }
+console.log(fibonacci(13))
