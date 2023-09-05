@@ -1,11 +1,13 @@
 const readline = require("readline-sync");
 
 const aluno1 = {
-    nome: "Ana",
+    matricula: 1,
+    nome: "Ana SIlva",
     notas: [8, 7, 6]
 };
 const aluno2 = {
-    nome: "Beto",
+    matricula: 2,
+    nome: "Beto Costa",
     notas: [10, 5.5, 8]
 }
 
@@ -24,18 +26,17 @@ while (loop) {
         case 1:
             console.log("Listando todos os alunos");
             console.log("--------------------");
-
             for (const a of alunos) {
+                let soma = 0
                 console.log(`Nome: ${a.nome}`);
-                console.log(`Nota: ${a.notas} `)
+                console.log(`Nota: ${a.notas}`)
                 for (let i = 0; i < a.notas.lenght; i++) {
-                    console.log(`\t- Nota ${i + 1}: ${a.notas[i]}`);
+                    console.log(`\t- Nota: ${i + 1}: ${a.notas[i]}`);
                     soma += a.notas[i];
                 }
-                let media = a.notas.lenght / 3
-                console.log(`Media: ${media}`)
+                let media = soma / a.notas.lenght;
+                console.log(`\t -Média: ${media}`);
             }
-
             break;
 
 
