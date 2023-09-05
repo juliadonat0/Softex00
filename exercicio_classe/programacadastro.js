@@ -2,9 +2,10 @@ const readline = require("readline-sync");
 
 const aluno1 = {
     matricula: 1,
-    nome: "Ana SIlva",
+    nome: "Ana Silva",
     notas: [8, 7, 6]
 };
+
 const aluno2 = {
     matricula: 2,
     nome: "Beto Costa",
@@ -30,43 +31,37 @@ while (loop) {
         case 1:
             console.log("Listando todos os alunos");
             console.log("--------------------");
+            let soma = 0
             for (const a of alunos) {
-                let soma = 0
                 console.log(`Nome: ${a.nome}`);
-                console.log(`Nota: ${a.notas}`)
-                for (let i = 0; i < a.notas.lenght; i++) {
-                    console.log(`\t- Nota: ${i + 1}: ${a.notas[i]}`);
-                    soma += a.notas[i];
+                for (let i = 0; i < a.notas.length; i++) {
+                    console.log(`\t - Nota ${i + 1}: ${a.notas[i]}`)
+                    soma += a.notas[i]
                 }
-                let media = soma / a.notas.lenght;
-                console.log(`\t - Média: ${media}`);
+                let media = soma / a.notas.length;
+                console.log(`\t- Média: ${media.toFixed(2)}`)
             }
-            break;
 
 
 
-
-        case 2:
-            let nomeAluno = readline.question("Digite o nome do aluno: ");
-            let notasAluno = [];
-            for (let i = 0; i < 3; i++) {
-                notasAluno[i] = readline.questionFloat(`Digite a nota ${i + 1}`)
-            }
-            const aluno = {
-                nome: nomeAluno,
-                notas: notasAluno
-            }
-            alunos.push(aluno);
-            break
-
-
-
-        case 0:
-            console.log("Saindo do sistema...");
-            loop = false;
             break
         default:
             console.log("Operação Inválida")
             break
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
