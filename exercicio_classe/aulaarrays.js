@@ -58,10 +58,11 @@ console.log(fruta.indexOf("laranja"))
 console.log("exercicio 10")
 var doces = ["coco", "goiaba", "jaca"]
 function eUmArray(array) {
-    if (typeof array == 'arra') {
+    if (typeof array === 'Array') {
         return true
     } else {
         return false
     }
 }
-console.log(` A variável doces é um array? ${eUmArray(10)}`);
+console.log(` A variável doces é um array? ${eUmArray(doces)}`);
+
