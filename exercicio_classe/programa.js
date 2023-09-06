@@ -26,12 +26,13 @@ let loop = true
 while (loop) {
 
     let opcao = readline.questionInt("Escolha uma opção:  ");
+    let soma = 0
     switch (opcao) {
         case 1:
             console.log("Listando todos os alunos");
             console.log("--------------------");
             for (const a of alunos) {
-                let soma = 0
+
                 console.log(`Nome: ${a.nome}`);
                 console.log(`Nota: ${a.notas}`)
                 for (let i = 0; i < a.notas.lenght; i++) {
@@ -43,30 +44,30 @@ while (loop) {
             }
             break;
 
-
-
-
+            F
+    }
+}
         case 2:
-            let nomeAluno = readline.question("Digite o nome do aluno: ");
-            let notasAluno = [];
-            for (let i = 0; i < 3; i++) {
-                notasAluno[i] = readline.questionFloat(`Digite a nota ${i + 1}`)
-            }
-            const aluno = {
-                nome: nomeAluno,
-                notas: notasAluno
-            }
-            alunos.push(aluno);
-            break
+let nomeAluno = readline.question("Digite o nome do aluno: ");
+let notasAluno = [];
+for (let i = 0; i < 3; i++) {
+    notasAluno[i] = readline.questionFloat(`Digite a nota ${i + 1}`)
+}
+const aluno = {
+    nome: nomeAluno,
+    notas: notasAluno
+}
+alunos.push(aluno);
+break
 
 
 
         case 0:
-            console.log("Saindo do sistema...");
-            loop = false;
-            break
+console.log("Saindo do sistema...");
+loop = false;
+break
         default:
-            console.log("Operação Inválida")
-            break
+console.log("Operação Inválida")
+break
     }
 }
