@@ -37,4 +37,3 @@ minhaConta.saldoAtual() // item 1 do exercício
 minhaConta.deposito(750) // item 2 do exercício
 minhaConta.saque(50000) // item 3 do exercício
 minhaConta.extratoConta() //item 4 conta mostrada no Extrato
-
