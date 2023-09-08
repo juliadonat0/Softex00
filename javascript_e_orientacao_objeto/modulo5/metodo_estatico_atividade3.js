@@ -1,7 +1,7 @@
-class StaticClassMethod{
-    static myName(){
-    return "Ana"
+class pessoa {
+    static Nome() {
+        return "Julia"
     }
 }
 
-console.log (StaticClassMethod)
+console.log(pessoa.Nome())
