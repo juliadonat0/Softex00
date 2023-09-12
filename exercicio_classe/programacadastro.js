@@ -31,42 +31,74 @@ while (loop) {
         case 1:
             console.log("Listando todos os alunos");
             console.log("--------------------");
-            for (const a of alunos) {
-                let soma = 0
-                console.log(`Nome: ${a.nome}`);
-                for (let i = 0; i < a.notas.length; i++) {
-                    console.log(`\t - Nota ${i + 1}: ${a.notas[i]}`)
-                    soma += a.notas[i]
-                }
-                let media = soma / a.notas.length;
-                console.log(`\t- Média: ${media.toFixed(2)}`)
 
-            }
-            break
+            listarAlunos()
+
+            break;
+
         case 2:
-            let nomeAluno = readline.question("Digite o nome do aluno: ");
-            let notasAluno = [];
-            for (let i = 0; i < 3; i++) {
-                notasAluno[i] = readline.questionFloat(`Digite a nota ${i + 1}`)
-            }
-            const aluno = {
-                nome: nomeAluno,
-                notas: notasAluno
-            }
-            alunos.push(aluno);
-            break
+            cadastrarAluno()
 
+            break
         case 3:
-
-           
+            let buscarMatricula = readline.question("Digite a matrícula que você deseja obter informação: ");
+            for (const a of alunos) {
+                if (buscarMatricula == a.matricula) {
+                    console.log(` Matrícula: ${a.matricula}`)
+                    console.log(`Nome: ${a.nome}`)
+                    console.log(`Notas ${a.notas}`)
+                }
+            }
             break
 
+        case 4:
+            let matriculaAlterar = readline.question("Digite a matrícula que você deseja alterar: ");
+            for (const m of alunos) {
+                if (matriculaAlterar == m.matricula) {
+                    m.nome = readline.question("Digite para qual nome você quer alterar: ");
+                    console.log(` Matrícula: ${m.matricula}`)
+                    console.log(`Nome: ${m.nome}`)
+                    console.log(`Notas ${m.notas}`)
+                }
+
+            }
+            break
         case 0:
             console.log("Saindo do sistema...");
             loop = false;
             break
-            default:
+        default:
             console.log("Operação Inválida")
             break
     }
+}
+
+function listarAlunos() {
+    for (const a of alunos) {
+        console.log(`Matrícula: ${a.matricula}`)
+        console.log(`Nome: ${a.nome}`);
+
+        let soma = 0
+        for (let i = 0; i < a.notas.length; i++) {
+            console.log(`\t - Nota ${i + 1}: ${a.notas[i]}`)
+            soma += a.notas[i]
+        }
+        let media = soma / a.notas.length;
+        console.log(`\t- Média: ${media.toFixed(2)}`)
+    }
+}
+
+function cadastrarAluno() {
+    let nomeAluno = readline.question("Digite o nome do aluno: ");
+    let matriculaAluno = readline.question("Digite a matrícula do aluno: ");
+    let notasAluno = [];
+    for (let i = 0; i < 3; i++) {
+        notasAluno[i] = readline.questionFloat(`Digite a nota ${i + 1}`)
+    }
+    const aluno = {
+        nome: nomeAluno,
+        matricula: matriculaAluno,
+        notas: notasAluno
+    }
+    alunos.push(aluno);
 }
