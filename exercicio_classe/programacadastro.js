@@ -31,10 +31,9 @@ while (loop) {
         case 1:
             console.log("Listando todos os alunos");
             console.log("--------------------");
-
             for (const a of alunos) {
-                console.log(`Nome: ${a.nome}`);
                 let soma = 0
+                console.log(`Nome: ${a.nome}`);
                 for (let i = 0; i < a.notas.length; i++) {
                     console.log(`\t - Nota ${i + 1}: ${a.notas[i]}`)
                     soma += a.notas[i]
@@ -54,33 +53,9 @@ while (loop) {
                 nome: nomeAluno,
                 notas: notasAluno
             }
-            alunos.push(aluno);
             break
-
-        case 3:
-
-        case 0:
-            console.log("Saindo do sistema...");
-            loop = false;
-            break
-
-        default:
+            default:
             console.log("Operação Inválida")
             break
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
