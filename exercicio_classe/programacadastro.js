@@ -53,6 +53,17 @@ while (loop) {
                 nome: nomeAluno,
                 notas: notasAluno
             }
+            alunos.push(aluno);
+            break
+
+        case 3:
+
+           
+            break
+
+        case 0:
+            console.log("Saindo do sistema...");
+            loop = false;
             break
             default:
             console.log("Operação Inválida")
