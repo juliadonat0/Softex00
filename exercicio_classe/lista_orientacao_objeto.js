@@ -17,13 +17,11 @@ const carro2 = {
     modelo: "fusca",
     ano: 1970,
 
-};
-
-ligar()
-function ligar() {
-    console.log("O carro está ligado!");
+    ligar: function () {
+        console.log("O carro está ligado!");
+    }
 }
-
+carro2.ligar()
 console.log("-------------------")
 
 
