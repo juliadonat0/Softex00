@@ -20,6 +20,7 @@ console.log("1 - Listar todos os alunos");
 console.log("2 - Cadastrar todos os alunos");
 console.log("3 - Buscar todos os alunos");
 console.log("4 - Alterar todos os alunos");
+console.log("5 - Excluir todos os alunos");
 console.log("========================");
 
 let loop = true
@@ -58,6 +59,7 @@ while (loop) {
             }
             alunos.push(aluno);
             break
+            
         case 3:
             let buscarMatricula = readline.question("Digite a matrícula que você deseja obter informação: ");
             for (const a of alunos) {
@@ -81,6 +83,10 @@ while (loop) {
 
             }
             break
+
+
+        case 5:
+
         case 0:
             console.log("Saindo do sistema...");
             loop = false;
