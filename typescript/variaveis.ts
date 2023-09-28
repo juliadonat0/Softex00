@@ -77,7 +77,7 @@ function push() {
 
 //pop(): Remove e retorna o último elemento do array.
 pop()
-function pop(){
+function pop() {
     var fruta = ["abacaxi", "banana", "maça"]
     fruta.pop()
     console.log(fruta)
@@ -85,7 +85,7 @@ function pop(){
 
 //shift(): Remove e retorna o primeiro elemento do array.
 shift()
-function shift(){
+function shift() {
     var fruta = ["abacaxi", "banana", "maça"]
     fruta.shift()
     console.log(fruta)
@@ -93,7 +93,7 @@ function shift(){
 
 //unshift(): Adiciona um ou mais elementos no início do array.
 unshift()
-function unshift(){
+function unshift() {
     var fruta = ["abacaxi", "banana", "maça"]
     fruta.unshift("limão")
     console.log(fruta)
@@ -101,20 +101,20 @@ function unshift(){
 
 //join(): Converte todos os elementos do array em uma única string, separados por um delimitador.
 join()
-function join(){
+function join() {
     var elementos = ['Terra', 'Fogo', 'Água', 'Ar'];
-    console.log (elementos.join('-'))
-    console.log (elementos.join('*'))
-    console.log (elementos.join('.'))
+    console.log(elementos.join('-'))
+    console.log(elementos.join('*'))
+    console.log(elementos.join('.'))
 }
- 
+
 //slice(): Retorna uma cópia de parte do array, definida por índices de início e fim.
 slice()
-function slice(){
+function slice() {
     var elementos = ['Terra', 'Fogo', 'Água', 'Ar'];
-    console.log (elementos.slice(0))
-    console.log (elementos.slice(1))
-    console.log (elementos.slice(2))
-    console.log (elementos.slice(3))
-    console.log (elementos.slice(4))
-    }
+    console.log(elementos.slice(0))
+    console.log(elementos.slice(1))
+    console.log(elementos.slice(2))
+    console.log(elementos.slice(3))
+    console.log(elementos.slice(4))
+}
