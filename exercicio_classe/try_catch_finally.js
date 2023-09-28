@@ -4,17 +4,19 @@
 console.log("EXERCÍCIO 1") // Em javascript a divisão por zero não retorna um erro. Retorna infiniy 
 let dividendo = 10
 let divisor = 0
-let result = dividendo / divisor
 try {
     if (divisor === 0) {
         throw "Valor negado"
     } else {
+        let result = dividendo / divisor
         console.log(`O resultado é: ${result}`)
     }
 } catch (erro) {
     console.log(" Erro: Divisão por zero")
 }
-
+finally {
+    console.log("Fim do método")
+}
 
 //2. Crie um programa que recebe do teclado uma string não numérica em um número
 //utilizando parseInt dentro de um bloco try...catch. 
