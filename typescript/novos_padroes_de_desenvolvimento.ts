@@ -75,3 +75,40 @@ console.log(circulo.areaCirculo())
 console.log(circulo.circunferencia())
 
 // 5. Crie uma classe ContaBancaria com os atributos saldo e numeroConta e métodos para depositar, sacar e verificar o saldo.
+class ContaBancaria {
+    numeroConta: number
+    saldo: number
+
+    constructor(numeroConta: number, saldo: number) {
+        this.numeroConta = numeroConta
+        this.saldo = saldo
+    }
+
+    depositar(deposito: number) {
+       if (deposito <=0){
+        throw `Operação de Depósito Inválida: R$ ${deposito}`
+       }
+        
+        this.saldo += deposito
+        return (`A conta número ${this.numeroConta}, recebeu um depósito de ${deposito} e tem de saldo R$ ${this.saldo}`)
+    }
+    verificarSaldo() {
+        return (`A conta número ${this.numeroConta} tem de saldo R$ ${this.saldo}`)
+
+    }
+    sacar(saque: number) {
+        if (saque <= 0 || saque > this.saldo) {
+            throw `Operação de Saque Inválida: R$ ${saque}`
+        }
+        this.saldo -= saque
+        return (`A conta número ${this.numeroConta}, realizou um saque de ${saque} e tem de saldo R$ ${this.saldo}`)
+
+    }
+}
+
+var minhaConta = new ContaBancaria(123, 50000)
+console.log(minhaConta.verificarSaldo())
+console.log(minhaConta.depositar(250))
+//console.log(minhaConta.depositar(0))   //com valor zero ele apresenta o throw e para de rodar o código.
+console.log(minhaConta.sacar(45000))
+console.log(minhaConta.sacar(6000))
